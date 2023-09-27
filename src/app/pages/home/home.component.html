@@ -1,0 +1,65 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">LET'S EXPLORE <br/> UNIQUE CLOTHES.</h1>
+        <a routerLink="menu">SHOP NOW <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<!-- step  -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">New arrivals of<span class="highlight"> THE COCO'S TOUCH</span></h1>
+    <div class="row mt-5">
+        <!-- one  -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>choice your favourite</p>
+            </div>
+        </div>
+<!-- two -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>fill the details</p>
+            </div>
+        </div>
+        <!-- three  -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>your item has been shipped</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- foodbox  -->
+<!-- <div class="container mt-4 mb-4">
+    <h1 class="text-center">COCO'S <span class="highlight">Favourite </span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of dressData;">
+            <div class="dressbox" *ngIf="i<=3">
+                <img src="{{fd.Img}}" />
+                <h1>{{fd.touch}}</h1>
+                <p>{{fd.Price | currency:'INR'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+</div> -->
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+
+        <div class="col-lg-3" *ngFor="let fd of dressData;index as i">
+            <div class="foodbox mt-3 mb-3" *ngIf="i<=3">
+                <img src="{{fd.Img}}">
+                <h1>{{fd.touch}}</h1>
+                <p>{{fd.Details}}</p>
+                <p>{{fd.Price | currency:'INR'}}</p>
+                <br/>
+                <a class="buybtn" [routerLink]="['/collection',fd.id]">Buy Now &nbsp;<i class="bi bi-bag"></i></a>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+</div>
